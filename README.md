@@ -1,75 +1,87 @@
-# Mindly - Assistente de Suporte Tecnico em C
+# Mindly — Assistente de Suporte Técnico em C
 
-O Mindly e um sistema baseado em CLI (Linha de Comando) que utiliza estruturas de dados do tipo Arvore de Decisao para diagnosticar e resolver problemas tecnicos comuns de computadores e perifericos.
-
-O objetivo e tornar o suporte tecnico acessivel atraves de um guia passo a passo interativo, ideal para ambientes domesticos ou corporativos.
+Mindly é um assistente de suporte técnico em linha de comando que usa uma árvore de decisão para diagnosticar problemas comuns de computadores e periféricos e sugerir soluções passo a passo.
 
 ## Funcionalidades
 
-O sistema carrega uma base de conhecimento dinamica e e capaz de diagnosticar problemas nos seguintes topicos:
+- Suporte a impressoras (tinta, atolamentos, conexão).
+- Diagnóstico de problemas de inicialização, vídeo e energia em PCs.
+- Verificação de conectividade Wi‑Fi e problemas de roteador.
+- Diagnóstico básico de rede (adaptadores, cabos).
+- Verificação de teclado e mouse (hardware e drivers).
 
-* Impressora: Problemas de tinta, papel e conexao.
-* PC/Computador: Falhas de inicializacao, video e energia.
-* WiFi: Quedas de conexao e problemas de roteador.
-* Rede: Configuracao de adaptador e cabos.
-* Teclado/Mouse: Falhas de hardware e drivers.
+## Como funciona
 
-## Como Funciona (Estrutura de Dados)
+O sistema carrega uma base de conhecimento (`banco_dados.txt`) e constrói uma árvore binária de decisão em memória. Cada nó representa uma pergunta; a resposta do usuário (`sim`/`nao`) determina o caminho (`sim` ou `nao`) até uma folha que contém uma `SOLUCAO`.
 
-O projeto utiliza uma Arvore Binaria de Decisao.
+Fluxo básico:
 
-1. O sistema le o arquivo banco_dados.txt.
-2. Cada pergunta e um No da arvore.
-3. Dependendo da resposta do usuario (sim ou nao), o programa percorre os ponteiros no->sim ou no->nao.
-4. O percurso termina quando o sistema encontra uma folha contendo a tag SOLUCAO.
+1. O programa carrega `banco_dados.txt`.
+2. Exibe a pergunta atual ao usuário.
+3. Avança pela árvore conforme as respostas até encontrar uma solução.
 
-## Como Compilar e Rodar
+## Requisitos
 
-Como o projeto inclui o arquivo da arvore diretamente no codigo principal, a compilacao e simples.
+- Compilador C (GCC recomendado).
+- Windows, Linux ou macOS.
 
-### Pre-requisitos
-* Compilador C (GCC recomendado).
-* Sistema operacional Windows ou Linux.
+## Compilar e executar
 
-### Passo a Passo
+Exemplo de comandos com GCC (PowerShell no Windows):
 
-1. Clone o repositorio:
-   git clone https://github.com/Guize1234/Mindly.git
-   cd Mindly
+```powershell
+gcc principal.c arvore.c -o mindly.exe
+# Executar
+.\mindly.exe
+```
 
-2. Compile o codigo:
-   gcc principal.c -o mindly
+Exemplo em Linux/macOS:
 
-3. Execute:
-   * No Windows:
-     ./mindly.exe
-   * No Linux/Mac:
-     ./mindly
+```bash
+gcc principal.c arvore.c -o mindly
+./mindly
+```
 
-## Estrutura dos Arquivos
+Observações:
 
-* principal.c: Gerencia o menu, entrada do usuario e inicia o diagnostico.
-* arvore.c: Contem a logica de manipulacao da arvore (criar no, carregar recursivamente, liberar memoria).
-* model.h: Define as structs (No e Mapeamento).
-* banco_dados.txt: Base de conhecimento do sistema. Arquivo de texto que contem todas as perguntas e respostas estruturadas.
+- Caso o projeto já inclua toda a árvore no código-fonte, talvez não seja necessário compilar `arvore.c` separadamente — verifique os arquivos do repositório.
 
-## Como adicionar novos diagnosticos
+## Estrutura de arquivos
 
-Voce pode expandir o Mindly editando apenas o arquivo banco_dados.txt, sem precisar recompilar o codigo.
+- `principal.c` — controlador do menu, entrada do usuário e fluxo principal.
+- `arvore.c` — funções de manipulação da árvore (criação, carregamento recursivo, liberação).
+- `model.h` — definições de `struct` (nó e mapeamento).
+- `banco_dados.txt` — base de conhecimento em texto simples.
 
-Formato do arquivo:
+## Formato do `banco_dados.txt`
 
-[topico]
-Pergunta inicial?
-Pergunta se a resposta for SIM?
-Solucao se SIM para a anterior.
+O arquivo contém perguntas, ramos e soluções. Exemplo simplificado:
+
+```
+[Impressora]
+A impressora está ligada?
+Sim: Verifique níveis de tinta.
+Nao: Verifique conexão de energia.
 #
-#
-Pergunta se a resposta for NAO?
-...
 
-* Use # para indicar o fim de um ramo.
-* Use SOLUCAO: para entregar uma resposta final.
+SOLUCAO: Substituir cartucho.
+#
+```
+
+Regras rápidas:
+
+- Use `#` para indicar o fim de um ramo.
+- Use a tag `SOLUCAO:` no início da linha para marcar uma solução final.
+
+## Como adicionar diagnósticos
+
+Edite apenas o arquivo `banco_dados.txt` seguindo o formato acima — não é necessário recompilar o código se o carregamento for dinâmico.
+
+## Autores
+
+- Guilherme — https://github.com/Guize1234
+- Sofia — https://github.com/sofiafrantzz
+- Vinícius — https://github.com/ViniciosRafael
 
 ---
-Projeto desenvolvido para a disciplina de Estrutura de Dados.
+Projeto desenvolvido para a disciplina de Estruturas de Dados.
