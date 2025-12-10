@@ -1,0 +1,192 @@
+[impressora]
+A impressora esta ligada?
+A luz de erro esta acesa?
+Ha papel na bandeja?
+A tinta esta acabando?
+A temperatura esta muito alta?
+SOLUCAO: Substitua o cartucho de tinta.
+#
+#
+SOLUCAO: Limpe os rolos de alimentacao.
+#
+#
+SOLUCAO: Carregue papel na bandeja.
+#
+#
+Tente imprimir um teste. O papel saiu?
+Apareceu mensagem de erro?
+SOLUCAO: Reinicie a impressora.
+#
+SOLUCAO: Procure a secao de suporte do fabricante.
+#
+#
+SOLUCAO: Verifique o driver da impressora no computador.
+#
+#
+SOLUCAO: Procure assistencia tecnica.
+#
+#
+O cabo de energia esta conectado?
+SOLUCAO: Conecte o cabo na tomada e ligue novamente.
+#
+SOLUCAO: Procure ajuda tecnica - possível problema na fonte.
+#
+#
+
+[pc]
+O computador emite algum som ao tentar ligar?
+Ve imagem na tela?
+O Windows esta carregando?
+Apareceu a tela de login?
+Consegue acessar o Windows?
+SOLUCAO: Sistema funcionando normalmente!
+#
+#
+SOLUCAO: Faca login com sua senha.
+#
+#
+SOLUCAO: Tente desligar e ligar novamente.
+#
+#
+Aparece uma tela preta ou com erro?
+SOLUCAO: Procure o código de erro e pesquise.
+#
+#
+SOLUCAO: Tente modo de recuperacao do Windows.
+#
+#
+A luz do monitor esta acesa?
+SOLUCAO: Teste outro monitor ou cabo de vídeo.
+#
+#
+SOLUCAO: Ligue o monitor na tomada.
+#
+#
+O cabo de energia esta conectado a tomada?
+O botao power esta funcionando?
+SOLUCAO: Pressione o botao por 5 segundos.
+#
+#
+SOLUCAO: Procure assistencia tecnica.
+#
+#
+SOLUCAO: Procure assistencia tecnica - possivel problema na fonte.
+#
+#
+
+[wifi]
+O roteador esta ligado?
+Voce ve a rede WiFi disponivel?
+Consegue conectar a rede?
+Tem acesso a internet?
+A velocidade esta normal?
+SOLUCAO: Conexao funcionando normalmente!
+#
+#
+SOLUCAO: Reinicie o computador.
+#
+#
+Sabe a senha correta?
+SOLUCAO: Digite a senha correta.
+#
+SOLUCAO: Restaure as configuracoes do roteador.
+#
+#
+Ha outros dispositivos conectados?
+SOLUCAO: Desconecte alguns dispositivos.
+#
+#
+SOLUCAO: Aumente a potencia do sinal do roteador.
+#
+#
+O roteador esta muito longe?
+SOLUCAO: Aproxime-se do roteador.
+#
+SOLUCAO: Reinicie o roteador (30 segundos desligado).
+#
+#
+SOLUCAO: Ligue o roteador pressionando o botao power.
+#
+#
+
+[rede]
+Consegue ver a rede do computador?
+O adaptador de rede esta habilitado?
+O driver esta atualizado?
+Consegue usar a internet?
+A velocidade esta adequada?
+SOLUCAO: Rede funcionando
+#
+#
+SOLUCAO: Procure o suporte.
+#
+#
+Ha mensagem de conflito de IP?
+SOLUCAO: Aumente largura de banda.
+#
+#
+SOLUCAO: Use IP estatico.
+#
+#
+SOLUCAO: Atualize o driver pelo Gerenciador.
+#
+#
+SOLUCAO: Clique com botao direito e habilite o adaptador.
+#
+#
+O cabo de rede esta conectado?
+O modem esta ligado?
+SOLUCAO: Ligue o modem.
+#
+SOLUCAO: Reinicie o modem (30 segundos).
+#
+#
+SOLUCAO: Conecte o cabo de rede na porta.
+#
+#
+
+[teclado]
+O teclado/mouse esta conectado?
+O computador reconhece o dispositivo?
+Os botoes/teclas respondem?
+Esta usando modelo sem fio?
+As pilhas estao funcionando?
+SOLUCAO: Troque as pilhas.
+#
+#
+SOLUCAO: Reconecte o receptor USB.
+#
+#
+As teclas estao travando?
+SOLUCAO: Limpe o teclado/mouse.
+#
+#
+SOLUCAO: Considere substituir.
+#
+#
+O driver esta instalado corretamente?
+O Windows esta exibindo erro?
+SOLUCAO: Reinstale o driver.
+#
+#
+SOLUCAO: Atualize o driver.
+#
+#
+SOLUCAO: Baixe driver do fabricante.
+#
+#
+O cabo/USB esta conectado firmemente?
+A porta USB esta funcionando?
+Ja tentou outra porta USB?
+SOLUCAO: Troque de porta USB.
+#
+#
+SOLUCAO: Defeito na porta USB.
+#
+#
+SOLUCAO: Teste com outro dispositivo USB.
+#
+#
+SOLUCAO: Conecte o cabo corretamente.
+#
+#
